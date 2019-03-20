@@ -42,7 +42,7 @@ ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物
 ArrayList的宣告與基本使用
 
 ```
-    public static  void LinkedList_List() {
+    public static void LinkedList_List() {
         LinkedList<Integer> myList = new LinkedList<Integer>(); //可以忽略型態不寫
 
         myList.add(1);  //加入元素
@@ -94,7 +94,7 @@ ArrayList的二維陣列
 基本上語法ArrayList幾乎一模一樣，只多了可以對First跟Last進行動作
 
 ```
-     public static  void LinkedList_List() {
+     public static void LinkedList_List() {
         LinkedList<Integer> myList = new LinkedList<Integer>(); //可以忽略型態不寫
 
         myList.add(1);  //加入元素
