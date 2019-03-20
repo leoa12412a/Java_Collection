@@ -3,7 +3,7 @@
 ## 關於Collection
 
 在Java裡頭除了陣列可以幫我們處理資料以外，再來就是Collection API中的元件了。Collection(集合)就是一個設計用來處理多個資料物件，而存放在集合中的物件我們把他稱之為Elements(元素)，在程式運行時，有時需要一個地方暫存產生出來的物件，這個地方我們就稱為Container(容器)。然而在java.util.Collection介面中定義了所有集合最基本的存取方式如下圖:</br>
-![image]()</br></br>
+![image](https://github.com/leoa12412a/Java_Collection/blob/master/1.PNG)</br></br>
 
 ## 解析 Collection interface
 
@@ -32,10 +32,10 @@ List算是在應用程式裡最常見的，List代表的就是所謂清單列表
 
 假設今天三個物件分別要儲存在ArrayList 和 LinkedList會以下圖的方式進行儲存
 ArrayList會按照順所有的物件，所以要選取特定(第N個)元素時，非常方便快速，而LinkedList則是以指標的方式指向下一個，所以如果要選取特定之元素必須一個一個數，速度相對地就會比較慢。<br>
-![image]()</br></br>
+![image](https://github.com/leoa12412a/Java_Collection/blob/master/2.PNG)</br></br>
 而今天如果要在物件1後面再插入一個物件A，則會如下圖。
 ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物件，而LinkedList只需要讓物件1指向物件A和物件A指向物件2，如果今天List內的數量很多，ArrayList會影響到被插入的index後的每一個，而LinkedList只會影響到二個。<br>
-![image]()</br>
+![image](https://github.com/leoa12412a/Java_Collection/blob/master/3.PNG)</br>
 
 ### ArrayList
 
