@@ -7,7 +7,8 @@
 
 ## 解析 Collection interface
 
-Collection interface分別繼承了另外3個interface分別是Set、List、Queue，下面對這三個interface也有簡單的介紹:</br>
+Collection interface分別繼承了另外3個interface分別是Set(集合)、List、Queue(佇列)，下面對這三個interface也有簡單的介紹:</br>
 
-  * 123
-  *123
+  * Set : 不允許相同物件存在的集合結構ex:HashSet、TreeSet
+  * List : 循序索引的串列結構ex:ArrayList、LinkedList
+  * Queue : 使用 Key-Value(鍵-值) 方式儲存的結構ex:HashMap、TreeMap
