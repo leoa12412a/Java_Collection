@@ -40,6 +40,28 @@ ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物
 ### ArrayList
 
 ```
-123
+    public static  void Array_List()
+    {
+        ArrayList<Integer> myList = new ArrayList<Integer>();
+
+        myList.add(1);  //加入元素
+        myList.add(3);
+        myList.add(5);
+
+        int count = myList.size(); //查詢myList大小
+
+        boolean isset = myList.contains(2); //查詢特定元素，上面沒有2所以回傳false
+
+        int number = myList.indexOf(3); //查詢特定元素在第幾個
+
+        boolean empty = myList.isEmpty(); //查詢ArrayList是否為空
+
+        myList.remove(1); //刪除第1個所以3被刪除 所以5變成第一個 第0個不變還是1
+
+        for(int i=0;i<myList.size();i++)
+        {
+            System.out.println(myList.get(i));
+        }
+    }
 ```
 
