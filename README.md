@@ -12,3 +12,9 @@ Collection interface分別繼承了另外3個interface分別是Set(集合)、Lis
   * Set : 不允許相同物件存在的集合結構ex:HashSet、TreeSet
   * List : 循序索引的串列結構ex:ArrayList、LinkedList
   * Queue : 使用 Key-Value(鍵-值) 方式儲存的結構ex:HashMap、TreeMap
+  
+## Collection - List 
+
+List算是在應用程式裡最常見的，List代表的就是所謂清單列表，最大的特點就是依序的放入以及取出，且具有順序性，List的實作類別有ArrayList、LinkedList、Vector
+
+### ArrayList
