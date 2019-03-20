@@ -39,6 +39,8 @@ ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物
 
 ### ArrayList
 
+ArrayList的宣告與基本使用
+
 ```
     public static  void Array_List()
     {
@@ -65,3 +67,21 @@ ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物
     }
 ```
 
+ArrayList的二維陣列
+
+```
+    public static void Array_List_for_2() {
+
+        ArrayList<ArrayList<Integer>> myList = new ArrayList<ArrayList<Integer>>();
+
+        for(int i=0;i<10;i++)
+        {
+            ArrayList<Integer> myList2 = new ArrayList<Integer>();
+            myList2.add(1);
+            myList2.add(2);
+            myList.add(myList2);
+        }
+
+        System.out.println(myList.get(0).get(1));
+    }
+```
