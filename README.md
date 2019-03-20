@@ -42,9 +42,8 @@ ArrayList必須所有A物件後方的物件都後移一個位置，好放入A物
 ArrayList的宣告與基本使用
 
 ```
-    public static  void Array_List()
-    {
-        ArrayList<Integer> myList = new ArrayList<Integer>(); //可以忽略型態不寫
+    public static  void LinkedList_List() {
+        LinkedList<Integer> myList = new LinkedList<Integer>(); //可以忽略型態不寫
 
         myList.add(1);  //加入元素
         myList.add(3);
@@ -60,7 +59,11 @@ ArrayList的宣告與基本使用
 
         myList.remove(1); //刪除第1個所以3被刪除 所以5變成第一個 第0個不變還是1
 
-        for(int i=0;i<myList.size();i++)
+        myList.set(1, 4); //修改第一個物件的元素5=>4
+
+        myList.add(1, 2); //在第一個位置插入元素2
+
+        for (int i = 0; i < myList.size(); i++) 
         {
             System.out.println(myList.get(i));
         }
@@ -83,5 +86,41 @@ ArrayList的二維陣列
         }
 
         System.out.println(myList.get(0).get(1));  //獲得第一層第0個裡的第二層第1個
+    }
+```
+
+### LinkedList
+
+基本上語法ArrayList幾乎一模一樣，只多了可以對First跟Last進行動作
+
+```
+     public static  void LinkedList_List() {
+        LinkedList<Integer> myList = new LinkedList<Integer>(); //可以忽略型態不寫
+
+        myList.add(1);  //加入元素
+        myList.add(3);
+        myList.add(5);
+
+        int count = myList.size(); //查詢myList大小
+
+        boolean isset = myList.contains(2); //查詢特定元素，上面沒有2所以回傳false
+
+        int number = myList.indexOf(3); //查詢特定元素在第幾個
+
+        boolean empty = myList.isEmpty(); //查詢ArrayList是否為空
+
+        myList.remove(1); //刪除第1個所以3被刪除 所以5變成第一個 第0個不變還是1
+
+        myList.set(1, 4); //修改第一個物件的元素5=>4
+
+        myList.add(1, 2); //在第一個位置插入元素2
+
+        for (int i = 0; i < myList.size(); i++)
+        {
+            System.out.println(myList.get(i));
+        }
+
+        System.out.println(myList.getFirst());  // 獲得第一個元素
+        System.out.println(myList.getLast());   // 獲得最後一個元素
     }
 ```
