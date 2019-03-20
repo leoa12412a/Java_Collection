@@ -9,7 +9,5 @@
 
 Collection interface分別繼承了另外3個interface分別是Set、List、Queue，下面對這三個interface也有簡單的介紹:</br>
 
-  <ol>
-    <li>123
-    <li>123
-  <ol>
+  * 123
+  *123
