@@ -44,7 +44,7 @@ ArrayList的宣告與基本使用
 ```
     public static  void Array_List()
     {
-        ArrayList<Integer> myList = new ArrayList<Integer>();
+        ArrayList<Integer> myList = new ArrayList<Integer>(); //可以忽略型態不寫
 
         myList.add(1);  //加入元素
         myList.add(3);
@@ -72,16 +72,16 @@ ArrayList的二維陣列
 ```
     public static void Array_List_for_2() {
 
-        ArrayList<ArrayList<Integer>> myList = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> myList = new ArrayList<ArrayList<Integer>>();  //型態為ArrayList
 
-        for(int i=0;i<10;i++)
+        for(int i=0;i<10;i++)  // 假設第一層有10個
         {
-            ArrayList<Integer> myList2 = new ArrayList<Integer>();
-            myList2.add(1);
+            ArrayList<Integer> myList2 = new ArrayList<Integer>();  //每個第一層都新增一個第二層ArrayList
+            myList2.add(1);  //為第二層ArrayList添加元素
             myList2.add(2);
-            myList.add(myList2);
+            myList.add(myList2); //為第一層ArrayList添加第二層ArrayList
         }
 
-        System.out.println(myList.get(0).get(1));
+        System.out.println(myList.get(0).get(1));  //獲得第一層第0個裡的第二層第1個
     }
 ```
