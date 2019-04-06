@@ -142,8 +142,10 @@ Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的�
 
 ### HashSet
 HashSet是基於數據結構中的哈希表(Hash table)來實現的，哈希表又稱為雜湊表是一種根據Key直接查詢在內存儲存位置的資料結構，也就是可以透過一個關鍵的值
-(Key)來查找資料，簡單來說這種方式可以提高查找的效率。Hash裡頭也可以是空值(Null)，但只能有一個空值。
+(Key)來查找資料，簡單來說這種方式可以提高查找的效率。HashSet裡頭也可以是空值(Null)，但只能有一個空值，另外HashSet裡頭的元素不能保證排列的順序，順序有可能發生變化。
 
+
+下面是一個簡單的範例，我們在hashset添加(add)幾個值
 ```
 public class HashSet_example {
 
@@ -166,4 +168,53 @@ public class HashSet_example {
     }
    
 ```
+產生結果
+```
+[, 1, 2, 3]
+```
+觀察產生的結果我們可以知道如果有同樣的元素並不會存入HashSet裡頭，空值亦只能存在一個。<br><br>
+
+再來看下面的範例，我們這次讓HashSet內每次新增一個new產生出來的Student，並重複輸入一樣的學生
+```
+public class HashSet_example {
+
+    public static HashSet hashset;
+
+    public static void main(String[] args) {
+        hashset = new HashSet();
+        ex2();
+    }
+  
+    public static void ex2()
+    {
+        hashset.add(new Student("1","Leo"));
+        hashset.add(new Student("2","Eric"));
+        hashset.add(new Student("3","Jerry"));
+        hashset.add(new Student("1","Leo"));
+        System.out.println(hashset);
+    }
+}
+
+
+
+class Student {
+    private String id;
+    private String name;
+    Student(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public String toString()  {
+        return String.format("(%s, %s)", id, name);
+    }
+
+}
+```
+產生結果
+```
+[(3, Jerry), (2, Eric), (1, Leo), (1, Leo)]
+```
+
 
