@@ -218,7 +218,7 @@ class Student {
 ```
 這是理所當然的結果，因為你並沒有告訴Set，什麼樣的Student實例才算是重複，以HashSet為例，會使用物件的hashCode()與equals()來判斷物件是否相同，HashSet
 的實作概念是，在記憶體中開設空間，每個空間會有個雜湊編碼（Hash code）：
-![image]('https://github.com/leoa12412a/Java_Collection/blob/master/hashset1.PNG')</br></br>
+![image](https://github.com/leoa12412a/Java_Collection/blob/master/hashset1.PNG)</br></br>
 這些空間稱為雜湊桶（Hash bucket），如果物件要加入HashSet，則會呼叫物件的hashCode()取得雜湊碼，並嘗試放入對應號碼的雜湊桶中，如果雜湊桶中沒物件，則直接放入，如上圖所示；如果雜湊桶中有物件呢？會再呼叫物件的equals()進行比較：</br>
 ![image]()</br></br>
 
