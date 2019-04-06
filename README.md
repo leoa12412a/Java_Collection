@@ -127,8 +127,14 @@ ArrayList的二維陣列
 
 ## Collection - Set
 
-Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的元素都是唯一值，如果添加重複元素會被忽略掉。
-而Set裡有幾種實現的方式:
+Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的元素都是唯一值，如果添加重複元素會被忽略掉。Set裡對於重複值的判斷並不是用 '==' 而是equals，而equeals 和 == 之間的差異在於下面幾點<br>
+
+以A、B兩個變數來舉例:<br>
+
+* ==是判斷A.B兩個變數分別指向同一個記憶體空間，equals是判斷A.B個別指向的記憶體空間裡頭的值是否一樣
+* ==是拿記憶體的位置做比較，equals是對A、B的內容作比較
+
+而Set裡有幾種實現的方式:<br>
 
 * HashSet
 * TreeSet
