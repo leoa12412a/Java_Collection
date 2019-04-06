@@ -124,3 +124,13 @@ ArrayList的二維陣列
         System.out.println(myList.getLast());   // 獲得最後一個元素
     }
 ```
+
+## Collection - Set
+
+Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的元素都是唯一值，如果添加重複元素會被忽略掉。
+而Set裡有幾種實現的方式:
+
+* HashSet
+* TreeSet
+* LinkedHashSet
+
