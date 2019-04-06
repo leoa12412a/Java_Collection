@@ -140,3 +140,30 @@ Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的�
 * TreeSet
 * LinkedHashSet
 
+### HashSet
+HashSet是基於數據結構中的哈希表(Hash table)來實現的，哈希表又稱為雜湊表是一種根據Key直接查詢在內存儲存位置的資料結構，也就是可以透過一個關鍵的值
+(Key)來查找資料，簡單來說這種方式可以提高查找的效率。Hash裡頭也可以是空值(Null)，但只能有一個空值。
+
+```
+public class HashSet_example {
+
+    public static HashSet hashset;
+
+    public static void main(String[] args) {
+        hashset = new HashSet();
+        ex1();
+    }
+
+    public static void ex1()
+    {
+        hashset.add("1");
+        hashset.add("2");
+        hashset.add("3");
+        hashset.add("1");
+        hashset.add("");
+        hashset.add("");
+        System.out.println(hashset);
+    }
+   
+```
+
