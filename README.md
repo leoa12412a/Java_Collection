@@ -297,3 +297,65 @@ class Student1 {
 [(3, Jerry), (1, Leo), (2, Eric)]
 ```
 這邊比起上一個範例程式多了hashCode()來判斷雜湊桶中是否有物件，並且在equals()裡判斷如果有的話就判斷是否相同，沒有的話就直接存入。
+
+### LinkedHashSet & TreeSet
+
+LinkedHashSet和HashSet的差別在於，LinkedHashSet維護著一個運行於所有條目的雙重連結列表。此連結列表定義了疊代順序，該疊代順序可為插入順序或是訪問順序。
+
+TreeSet則是提供了使用存儲樹Set接口的一個實現。按升序排列。訪問和檢索的時間是相當快，存儲，必須迅速找到大量的排序信息時，這使得TreeSet的一個很好的選擇。
+
+下面使用一個範例來表示HashSet 、 LinkedHashSet 以及TreeSet之間的差異
+
+```
+public static void three_set_dif() {
+
+        HashSet<String> hs = new HashSet<String>();
+        hs.add("b");
+        hs.add("a");
+        hs.add("d");
+        hs.add("e");
+        hs.add("c");
+        hs.add("f");
+        hs.add("catepillar");
+        hs.add("momor");
+        hs.add("bush");
+        hs.add("cateprillar");
+        System.out.println("HashSet 顺序:\n"+hs);
+
+        LinkedHashSet<String> lhs = new LinkedHashSet<String>();
+        lhs.add("B");
+        lhs.add("A");
+        lhs.add("D");
+        lhs.add("E");
+        lhs.add("C");
+        lhs.add("F");
+        lhs.add("catepillar");
+        lhs.add("momor");
+        lhs.add("bush");
+        lhs.add("cateprillar");
+        System.out.println("LinkedHashSet 顺序:\n"+lhs);
+
+        TreeSet<String> ts = new TreeSet<String>();
+        ts.add("B");
+        ts.add("A");
+        ts.add("D");
+        ts.add("E");
+        ts.add("C");
+        ts.add("F");
+        ts.add("catepillar");
+        ts.add("momor");
+        ts.add("bush");
+        ts.add("cateprillar");
+        System.out.println("TreeSet 顺序:\n"+ts);
+    }
+```
+
+產生結果:
+```
+HashSet 顺序:
+[a, b, catepillar, c, cateprillar, d, e, f, bush, momor]
+LinkedHashSet 顺序:
+[b, a, d, e, c, f, catepillar, momor, bush, cateprillar]
+TreeSet 顺序:
+[a, b, bush, c, catepillar, cateprillar, d, e, f, momor]
+```
