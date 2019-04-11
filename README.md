@@ -345,12 +345,12 @@ public static void three_set_dif() {
         System.out.println("HashSet 顺序:\n"+hs);
 
         LinkedHashSet<String> lhs = new LinkedHashSet<String>();
-        lhs.add("B");
-        lhs.add("A");
-        lhs.add("D");
-        lhs.add("E");
-        lhs.add("C");
-        lhs.add("F");
+        lhs.add("b");
+        lhs.add("a");
+        lhs.add("d");
+        lhs.add("e");
+        lhs.add("c");
+        lhs.add("f");
         lhs.add("catepillar");
         lhs.add("momor");
         lhs.add("bush");
@@ -358,12 +358,12 @@ public static void three_set_dif() {
         System.out.println("LinkedHashSet 顺序:\n"+lhs);
 
         TreeSet<String> ts = new TreeSet<String>();
-        ts.add("B");
-        ts.add("A");
-        ts.add("D");
-        ts.add("E");
-        ts.add("C");
-        ts.add("F");
+        ts.add("b");
+        ts.add("a");
+        ts.add("d");
+        ts.add("e");
+        ts.add("c");
+        ts.add("f");
         ts.add("catepillar");
         ts.add("momor");
         ts.add("bush");
