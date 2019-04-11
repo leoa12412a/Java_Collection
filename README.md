@@ -384,7 +384,7 @@ TreeSet 顺序:
 
 ## Collection - Queue
 
-如果希望收集物件時可以佇列方式，收集的物件加入至尾端，取得物件時可以從前端，則可以使用Queue介面的實作物件。Queue繼承自Collection，所以也具有Collection的add()、remove()、element()等方法，然而Queue定義了自己的offer()、poll()與peek()等方法，最主要的差別之一在於，add()、remove()、element()等方法操作失敗時會拋出例外，而offer()、poll()與peek()等方法操作失敗時會傳回特定值。
+如果希望收集物件時可以使用佇列方式，收集的物件加入至尾端，取得物件時可以從前端，則可以使用Queue介面的實作物件。Queue繼承自Collection，所以也具有Collection的add()、remove()、element()等方法，然而Queue定義了自己的offer()、poll()與peek()等方法，最主要的差別之一在於，add()、remove()、element()等方法操作失敗時會拋出例外，而offer()、poll()與peek()等方法操作失敗時會傳回特定值。
 
 如果物件有實作Queue，並打算以佇列方式使用，且佇列長度受限，通常建議使用offer()、poll()與peek()等方法。offer()方法用來在佇列後端加入物件，成功會傳回true，失敗則傳回false。poll()方法用來取出佇列前端物件，若佇列為空則傳回null。peek()用來取得（但不取出）佇列前端物件，若佇列為空則傳回null。
 
