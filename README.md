@@ -422,7 +422,7 @@ A
 ```
 <br>
 
-如果你也會想對佇列的前端與尾端進行操作，在前端加入物件與取出物件，在尾端加入物件與取出物件，Queue的子介面Deque(雙性柱列)就定義了這類行為，Deque中定義addFirst()、removeFirst()、getFirst()、addLast()、removeLast()、getLast()等方法，操作失敗時會拋出例外，而offerFirst()、pollFirst()、peekFirst()、offerLast()、pollLast()、peekLast()等方法，操作失敗時會傳回特定值。
+如果你也會想對佇列的前端與尾端進行操作，在前端加入物件與取出物件，在尾端加入物件與取出物件，Queue的子介面Deque(雙向柱列)就定義了這類行為，Deque中定義addFirst()、removeFirst()、getFirst()、addLast()、removeLast()、getLast()等方法，操作失敗時會拋出例外，而offerFirst()、pollFirst()、peekFirst()、offerLast()、pollLast()、peekLast()等方法，操作失敗時會傳回特定值。
 
 Queue的行為與Deque的行為有所重複，有幾個操作是等義的：<br>
 
