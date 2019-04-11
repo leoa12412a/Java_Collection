@@ -382,7 +382,7 @@ TreeSet 顺序:
 [a, b, bush, c, catepillar, cateprillar, d, e, f, momor]
 ```
 
-### Queue
+## Collection - Queue
 
 如果希望收集物件時可以佇列方式，收集的物件加入至尾端，取得物件時可以從前端，則可以使用Queue介面的實作物件。Queue繼承自Collection，所以也具有Collection的add()、remove()、element()等方法，然而Queue定義了自己的offer()、poll()與peek()等方法，最主要的差別之一在於，add()、remove()、element()等方法操作失敗時會拋出例外，而offer()、poll()與peek()等方法操作失敗時會傳回特定值。
 
