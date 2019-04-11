@@ -398,4 +398,52 @@ public class queue {
 A
 [B, C]
 ```
-<>
+<br>
+
+如果你也會想對佇列的前端與尾端進行操作，在前端加入物件與取出物件，在尾端加入物件與取出物件，Queue的子介面Deque(雙性柱列)就定義了這類行為，Deque中定義addFirst()、removeFirst()、getFirst()、addLast()、removeLast()、getLast()等方法，操作失敗時會拋出例外，而offerFirst()、pollFirst()、peekFirst()、offerLast()、pollLast()、peekLast()等方法，操作失敗時會傳回特定值。
+
+Queue的行為與Deque的行為有所重複，有幾個操作是等義的：<br>
+
+![image]()</br></br>
+
+下面使用一個簡單的範例</br>
+
+```
+public static void deque() {
+
+        Deque deque = new LinkedList<>();
+
+        Deque deque1 = new ArrayDeque<>(); //同上的宣告
+
+        deque.offer("A");
+
+        deque.offer("B");
+
+        deque.offer("C");
+
+        deque.offerFirst("D");
+
+        System.out.println(deque);
+
+        deque.offerLast("E");
+
+        System.out.println(deque);
+
+        deque.pollLast();
+
+        System.out.println(deque);
+
+    }
+```
+產生結果，我們可以看出在deque中我們可對柱列的上和下的元素進行修改或是查詢，一種類似LinkedList的方式
+```
+[D, A, B, C]
+[D, A, B, C, E]
+[D, A, B, C]
+```
+
+### PriorityQueue
+
+PriorityQueue保存隊列元素的順序不是按加入隊列的順序，而是按隊列元素的大小進行重新排序。因此當調用peek()或pool()方法取出隊列中頭部的元素時，並不是取出最先進入隊列的元素，而是取出隊列中的最小的元素。
+
+
