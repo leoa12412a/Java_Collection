@@ -134,6 +134,28 @@ Set繼承Collection介面，是用於存放不重複的元素，所以Set裡的�
 * ==是判斷A.B兩個變數分別指向同一個記憶體空間，equals是判斷A.B個別指向的記憶體空間裡頭的值是否一樣
 * ==是拿記憶體的位置做比較，equals是對A、B的內容作比較
 
+EX:<br>
+```
+String s1 = "hello";
+
+String s2 = "hell"+"o";
+
+System.out.println("Using equals op"+ (s1==s2)); //True
+
+System.out.println("Using equals method" + (s1.equals(s2))); //True
+
+//但是
+
+String s3 = new String("hello");
+
+String s4 = new String("hello");
+
+System.out.println("Using equals op" + (s3==s4)); //False
+
+System.out.println("Using equals method" + (s3.equals(s4))); //True
+```
+<br>
+
 而Set裡有幾種實現的方式:<br>
 
 * HashSet
