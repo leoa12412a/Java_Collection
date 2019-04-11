@@ -404,7 +404,7 @@ A
 
 Queue的行為與Deque的行為有所重複，有幾個操作是等義的：<br>
 
-![image]()</br></br>
+![image](https://github.com/leoa12412a/Java_Collection/blob/master/%E6%93%B7%E5%8F%96.PNG)</br></br>
 
 下面使用一個簡單的範例</br>
 
@@ -446,4 +446,25 @@ public static void deque() {
 
 PriorityQueue保存隊列元素的順序不是按加入隊列的順序，而是按隊列元素的大小進行重新排序。因此當調用peek()或pool()方法取出隊列中頭部的元素時，並不是取出最先進入隊列的元素，而是取出隊列中的最小的元素。
 
+```
+public static void PriorityQueue() {
+
+        PriorityQueue<String> pq = new PriorityQueue<>();
+
+        pq.offer("B");
+        pq.offer("A");
+        pq.offer("D");
+        pq.offer("E");
+        pq.offer("C");
+        pq.offer("G");
+        pq.offer("F");
+        
+        System.out.println(pq);
+
+    }
+```
+產生結果，可以看到輸出的變數都是經過比對後從小到大排列
+```
+[A, B, D, E, C, G, F, I]
+```
 
